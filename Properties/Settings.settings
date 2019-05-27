@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ParkFeeMag.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ParkFeeMag_WebStandardInfo_StandardInfo" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://zst.gzwulian.com/ClientService/WebServices/StandardInfo.asmx</Value>
+    </Setting>
+    <Setting Name="ParkFeeMag_WebChargeInfo_ChargeInfo" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://zst.gzwulian.com/ClientService/WebServices/ChargeInfo.asmx</Value>
+    </Setting>
+    <Setting Name="ParkFeeMag_WebCarTypeInfo_CarTypeInfo" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://zst.gzwulian.com/ClientService/WebServices/CarTypeInfo.asmx</Value>
+    </Setting>
+    <Setting Name="ParkFeeMag_WebWorkInfo_WorkInfo" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://zst.gzwulian.com/ClientService/WebServices/WorkInfo.asmx</Value>
+    </Setting>
+    <Setting Name="ParkFeeMag_WebOperatorInfo_OperatorInfo" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://zst.gzwulian.com/ClientService/WebServices/OperatorInfo.asmx</Value>
+    </Setting>
+    <Setting Name="ParkFeeMag_WebFInOutInfo_FInOutInfo" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://zst.gzwulian.com/ClientService/WebServices/FInOut.asmx</Value>
+    </Setting>
+    <Setting Name="ParkFeeMag_WebFCustomerInfo_FCustomerInfo" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://zst.gzwulian.com/ClientService/WebServices/FCustomerInfo.asmx</Value>
+    </Setting>
+    <Setting Name="ParkFeeMag_WebClearInfo_ClearInfo" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://zst.gzwulian.com/ClientService/WebServices/ClearInfo.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

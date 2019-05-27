@@ -1,0 +1,916 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3EDACFD1-C9BD-4DF6-B73D-B6C51CAF8380}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ParkFeeMag</RootNamespace>
+    <AssemblyName>ParkFeeMag</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>E:\ParkFeeMag201605\ParkSetup\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>物联车牌识别停车场管理系统</ProductName>
+    <PublisherName>jianyang</PublisherName>
+    <SuiteName>wltong</SuiteName>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+    <BootstrapperComponentsUrl>\\ParkFeeMag201605\安装包\Release\DotNetFX40Client</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ico3.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>24BA2B12C9841841517C48530D0BB9F46D144EB2</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>true</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=4.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.5.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\SysWOW64\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetSpeech, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\DotNetSpeech.dll</HintPath>
+    </Reference>
+    <Reference Include="iptb, Version=1.0.2077.24098, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\iptb.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.2.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\Lib\NPOI\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\Lib\NPOI\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\Lib\NPOI\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="SideBar">
+      <HintPath>..\Lib\SideBar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WHC.Pager.WinControlEx">
+      <HintPath>..\Lib\WHC.Pager.WinControlEx.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoFrom.cs" />
+    <Compile Include="frmAboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAboutUs.Designer.cs">
+      <DependentUpon>frmAboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddRole.Designer.cs">
+      <DependentUpon>frmAddRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackup.Designer.cs">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheck.Designer.cs">
+      <DependentUpon>frmCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfig.Designer.cs">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfirm.Designer.cs">
+      <DependentUpon>frmConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDataClear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDataClear.Designer.cs">
+      <DependentUpon>frmDataClear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDbSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDbSet.designer.cs">
+      <DependentUpon>frmDbSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOperation.designer.cs">
+      <DependentUpon>frmOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegstr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegstr.designer.cs">
+      <DependentUpon>frmRegstr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowInfo.Designer.cs">
+      <DependentUpon>frmShowInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChargeSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChargeSet.Designer.cs">
+      <DependentUpon>frmChargeSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCompany.Designer.cs">
+      <DependentUpon>frmCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEquipConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEquipConfig.Designer.cs">
+      <DependentUpon>frmEquipConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFCustomer.Designer.cs">
+      <DependentUpon>frmFCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFCustomerAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFCustomerAdd.Designer.cs">
+      <DependentUpon>frmFCustomerAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFInOutInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFInOutInfo.Designer.cs">
+      <DependentUpon>frmFInOutInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFirst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFirst.Designer.cs">
+      <DependentUpon>frmFirst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmimgshow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmimgshow.Designer.cs">
+      <DependentUpon>Frmimgshow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLimitUpdateT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLimitUpdateT.Designer.cs">
+      <DependentUpon>frmLimitUpdateT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOperatorMag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOperatorMag.Designer.cs">
+      <DependentUpon>frmOperatorMag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOperatorMagAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOperatorMagAdd.Designer.cs">
+      <DependentUpon>frmOperatorMagAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmParking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmParking.Designer.cs">
+      <DependentUpon>frmParking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPointSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPointSelect.designer.cs">
+      <DependentUpon>frmPointSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCard.Designer.cs">
+      <DependentUpon>frmCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManualFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManualFee.Designer.cs">
+      <DependentUpon>frmManualFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetRights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetRights.Designer.cs">
+      <DependentUpon>frmSetRights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStatistics.Designer.cs">
+      <DependentUpon>frmStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdatePwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdatePwd.designer.cs">
+      <DependentUpon>frmUpdatePwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWait.Designer.cs">
+      <DependentUpon>frmWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWorkRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWorkRecord.Designer.cs">
+      <DependentUpon>frmWorkRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\WebPage\GISSelectData.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="ModelTrans.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmLimitMag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLimitMag.Designer.cs">
+      <DependentUpon>frmLimitMag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInOutInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInOutInfo.Designer.cs">
+      <DependentUpon>frmInOutInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebCarTypeInfo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebChargeInfo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebClearInfo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebFCustomerInfo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebFInOutInfo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebOperatorInfo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebStandardInfo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebWorkInfo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="ZXJK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZXJK.Designer.cs">
+      <DependentUpon>ZXJK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChargeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChargeInfo.Designer.cs">
+      <DependentUpon>frmChargeInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmAboutUs.resx">
+      <DependentUpon>frmAboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddRole.resx">
+      <DependentUpon>frmAddRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBackup.resx">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheck.resx">
+      <DependentUpon>frmCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfig.resx">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfirm.resx">
+      <DependentUpon>frmConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDataClear.resx">
+      <DependentUpon>frmDataClear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDbSet.resx">
+      <DependentUpon>frmDbSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOperation.resx">
+      <DependentUpon>frmOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegstr.resx">
+      <DependentUpon>frmRegstr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowInfo.resx">
+      <DependentUpon>frmShowInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChargeSet.resx">
+      <DependentUpon>frmChargeSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCompany.resx">
+      <DependentUpon>frmCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEquipConfig.resx">
+      <DependentUpon>frmEquipConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFCustomer.resx">
+      <DependentUpon>frmFCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFCustomerAdd.resx">
+      <DependentUpon>frmFCustomerAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFInOutInfo.resx">
+      <DependentUpon>frmFInOutInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFirst.resx">
+      <DependentUpon>frmFirst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmimgshow.resx">
+      <DependentUpon>Frmimgshow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLimitUpdateT.resx">
+      <DependentUpon>frmLimitUpdateT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOperatorMag.resx">
+      <DependentUpon>frmOperatorMag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOperatorMagAdd.resx">
+      <DependentUpon>frmOperatorMagAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmParking.resx">
+      <DependentUpon>frmParking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPointSelect.resx">
+      <DependentUpon>frmPointSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCard.resx">
+      <DependentUpon>frmCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManualFee.resx">
+      <DependentUpon>frmManualFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetRights.resx">
+      <DependentUpon>frmSetRights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStatistics.resx">
+      <DependentUpon>frmStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdatePwd.resx">
+      <DependentUpon>frmUpdatePwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWait.resx">
+      <DependentUpon>frmWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorkRecord.resx">
+      <DependentUpon>frmWorkRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="frmLimitMag.resx">
+      <DependentUpon>frmLimitMag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInOutInfo.resx">
+      <DependentUpon>frmInOutInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZXJK.resx">
+      <DependentUpon>ZXJK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChargeInfo.resx">
+      <DependentUpon>frmChargeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Config\SysCon.ini" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Skins\Calmness.ssk" />
+    <None Include="Skins\CalmnessColor1.ssk" />
+    <None Include="Skins\CalmnessColor2.ssk" />
+    <None Include="Skins\DeepCyan.ssk" />
+    <None Include="Skins\DeepGreen.ssk" />
+    <None Include="Skins\DeepOrange.ssk" />
+    <None Include="Skins\DiamondBlue.ssk" />
+    <None Include="Skins\DiamondGreen.ssk" />
+    <None Include="Skins\Eighteen.ssk" />
+    <None Include="Skins\EighteenColor1.ssk" />
+    <None Include="Skins\EighteenColor2.ssk" />
+    <None Include="Skins\Emerald.ssk" />
+    <None Include="Skins\EmeraldColor1.ssk" />
+    <None Include="Skins\EmeraldColor2.ssk" />
+    <None Include="Skins\EmeraldColor3.ssk" />
+    <None Include="Skins\GlassBrown.ssk" />
+    <None Include="Skins\GlassGreen.ssk" />
+    <None Include="Skins\GlassOrange.ssk" />
+    <None Include="Skins\Longhorn.ssk" />
+    <None Include="Skins\MacOS.ssk" />
+    <None Include="Skins\mdb_autum.ssk" />
+    <None Include="Skins\mdb_spring.ssk" />
+    <None Include="Skins\mdb_summer.ssk" />
+    <None Include="Skins\mdb_winter.ssk" />
+    <None Include="Skins\mdd_autum.ssk" />
+    <None Include="Skins\mdd_spring.ssk" />
+    <None Include="Skins\mdd_summer.ssk" />
+    <None Include="Skins\mdd_winter.ssk" />
+    <None Include="Skins\Midsummer.ssk" />
+    <None Include="Skins\MidsummerColor1.ssk" />
+    <None Include="Skins\MidsummerColor2.ssk" />
+    <None Include="Skins\MidsummerColor3.ssk" />
+    <None Include="Skins\MP10.ssk" />
+    <None Include="Skins\MSN.ssk" />
+    <None Include="Skins\OneBlue.ssk" />
+    <None Include="Skins\OneCyan.ssk" />
+    <None Include="Skins\OneGreen.ssk" />
+    <None Include="Skins\OneOrange.ssk" />
+    <None Include="Skins\Page.ssk" />
+    <None Include="Skins\PageColor1.ssk" />
+    <None Include="Skins\PageColor2.ssk" />
+    <None Include="Skins\RealOne.ssk" />
+    <None Include="Skins\Silver.ssk" />
+    <None Include="Skins\SilverColor1.ssk" />
+    <None Include="Skins\SilverColor2.ssk" />
+    <None Include="Skins\SportsBlack.ssk" />
+    <None Include="Skins\SportsBlue.ssk" />
+    <None Include="Skins\SportsCyan.ssk" />
+    <None Include="Skins\SportsGreen.ssk" />
+    <None Include="Skins\SportsOrange.ssk" />
+    <None Include="Skins\SteelBlack.ssk" />
+    <None Include="Skins\SteelBlue.ssk" />
+    <None Include="Skins\vista1.ssk" />
+    <None Include="Skins\vista1_green.ssk" />
+    <None Include="Skins\Vista2.ssk" />
+    <None Include="Skins\Vista2_color1.ssk" />
+    <None Include="Skins\Vista2_color2.ssk" />
+    <None Include="Skins\Vista2_color3.ssk" />
+    <None Include="Skins\Vista2_color4.ssk" />
+    <None Include="Skins\Vista2_color5.ssk" />
+    <None Include="Skins\Vista2_color6.ssk" />
+    <None Include="Skins\Vista2_color7.ssk" />
+    <None Include="Skins\Warm.ssk" />
+    <None Include="Skins\WarmColor1.ssk" />
+    <None Include="Skins\WarmColor2.ssk" />
+    <None Include="Skins\WarmColor3.ssk" />
+    <None Include="Skins\Wave.ssk" />
+    <None Include="Skins\WaveColor1.ssk" />
+    <None Include="Skins\WaveColor2.ssk" />
+    <None Include="Skins\XPBlue.ssk" />
+    <None Include="Skins\XPGreen.ssk" />
+    <None Include="Skins\XPOrange.ssk" />
+    <None Include="Skins\XPSilver.ssk" />
+    <None Include="Web References\WebCarTypeInfo\CarTypeInfo.wsdl" />
+    <None Include="Web References\WebCarTypeInfo\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebChargeInfo\ChargeInfo.wsdl">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WebChargeInfo\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebClearInfo\ClearInfo.wsdl" />
+    <None Include="Web References\WebClearInfo\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebFCustomerInfo\FCustomerInfo.wsdl" />
+    <None Include="Web References\WebFCustomerInfo\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebFInOutInfo\FInOut.wsdl" />
+    <None Include="Web References\WebFInOutInfo\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebOperatorInfo\OperatorInfo.wsdl" />
+    <None Include="Web References\WebOperatorInfo\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebStandardInfo\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebStandardInfo\StandardInfo.wsdl" />
+    <None Include="Web References\WebWorkInfo\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebWorkInfo\WorkInfo.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{38D7AA58-C95B-449B-86C6-A8073A56E11F}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{E3D8759A-C5EB-402D-9F10-F5C6029A8D1A}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{0988C62E-247F-471F-A183-DB509C7A3839}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\leds.xml" />
+    <Content Include="GIS\WebPage\jquery-1.8.1.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GIS\WebPage\OperateGIS.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GIS\WebPage\SelectGISPoint.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GIS\WebPage\SelectGISPoint.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ico3.ico" />
+    <Content Include="Resources\AddOperator.png" />
+    <Content Include="Resources\AttachmentHS.png" />
+    <Content Include="Resources\CheckGrammarHS.png" />
+    <Content Include="Resources\Clock.png" />
+    <Content Include="Resources\CloseWindow.png" />
+    <Content Include="Resources\CMCSharpSDK.ico" />
+    <Content Include="Resources\DeleteOperator.png" />
+    <Content Include="Resources\ExitSystem.png" />
+    <Content Include="Resources\Help.png" />
+    <Content Include="Resources\HomeHS.png" />
+    <None Include="Web References\WebFInOutInfo\FInOut.disco" />
+    <None Include="Resources\import.gif" />
+    <Content Include="Resources\LegendHS.png" />
+    <Content Include="Resources\LockScreen.png" />
+    <Content Include="Resources\LogOff.png" />
+    <Content Include="Resources\ModifyPassword.png" />
+    <Content Include="Resources\NoteHS.png" />
+    <Content Include="Resources\OptionsHS.png" />
+    <None Include="Resources\浏览2.png" />
+    <None Include="Resources\还原.png" />
+    <None Include="Resources\备份图标.png" />
+    <None Include="Resources\out.gif" />
+    <Content Include="Resources\PropertiesHS.png" />
+    <None Include="Resources\退出.png" />
+    <None Include="Resources\登录.png" />
+    <None Include="Resources\通讯..png" />
+    <None Include="Resources\手动刷卡.png" />
+    <None Include="Resources\手动刷卡1.png" />
+    <None Include="Resources\播报.png" />
+    <None Include="Resources\设置.1png.png" />
+    <None Include="Web References\WebClearInfo\ClearInfo.disco" />
+    <None Include="Web References\WebCarTypeInfo\CarTypeInfo.disco" />
+    <None Include="Web References\WebFCustomerInfo\FCustomerInfo.disco" />
+    <None Include="Web References\WebOperatorInfo\OperatorInfo.disco" />
+    <None Include="Web References\WebStandardInfo\StandardInfo.disco" />
+    <None Include="Web References\WebChargeInfo\ChargeInfo.disco" />
+    <None Include="Web References\WebWorkInfo\WorkInfo.disco" />
+    <None Include="Resources\UserDelete.png" />
+    <None Include="Resources\UserAdd.png" />
+    <None Include="Resources\Refresh.png" />
+    <Content Include="Resources\RefreshDocViewHS.png" />
+    <Content Include="Resources\RefreshOperatorList.png" />
+    <Content Include="Resources\RefreshRightsList.png" />
+    <Content Include="Resources\RightsGroupManager.png" />
+    <Content Include="Resources\RightsMode.png" />
+    <Content Include="Resources\RoutingSlipHS.png" />
+    <None Include="Resources\save.gif" />
+    <Content Include="Resources\SaveAllChanged.png" />
+    <None Include="Resources\setting.gif" />
+    <Content Include="Resources\TaskHS.png" />
+    <Content Include="Resources\Web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://zst.gzwulian.com/ClientService/WebServices/FCustomerInfo.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebFCustomerInfo\</RelPath>
+      <UpdateFromURL>http://zst.gzwulian.com/ClientService/WebServices/FCustomerInfo.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ParkFeeMag_WebFCustomerInfo_FCustomerInfo</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://zst.gzwulian.com/ClientService/WebServices/FInOut.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebFInOutInfo\</RelPath>
+      <UpdateFromURL>http://zst.gzwulian.com/ClientService/WebServices/FInOut.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ParkFeeMag_WebFInOutInfo_FInOutInfo</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://zst.gzwulian.com/ClientService/WebServices/OperatorInfo.asmx%3fop=Add">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebOperatorInfo\</RelPath>
+      <UpdateFromURL>http://zst.gzwulian.com/ClientService/WebServices/OperatorInfo.asmx%3fop=Add</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ParkFeeMag_WebOperatorInfo_OperatorInfo</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://zst.gzwulian.com/ClientService/WebServices/WorkInfo.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebWorkInfo\</RelPath>
+      <UpdateFromURL>http://zst.gzwulian.com/ClientService/WebServices/WorkInfo.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ParkFeeMag_WebWorkInfo_WorkInfo</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://zst.gzwulian.com/ClientService/WebServices/ChargeInfo.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebChargeInfo\</RelPath>
+      <UpdateFromURL>http://zst.gzwulian.com/ClientService/WebServices/ChargeInfo.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ParkFeeMag_WebChargeInfo_ChargeInfo</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://zst.gzwulian.com/ClientService/WebServices/StandardInfo.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebStandardInfo\</RelPath>
+      <UpdateFromURL>http://zst.gzwulian.com/ClientService/WebServices/StandardInfo.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ParkFeeMag_WebStandardInfo_StandardInfo</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://zst.gzwulian.com/ClientService/WebServices/CarTypeInfo.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebCarTypeInfo\</RelPath>
+      <UpdateFromURL>http://zst.gzwulian.com/ClientService/WebServices/CarTypeInfo.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ParkFeeMag_WebCarTypeInfo_CarTypeInfo</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://zst.gzwulian.com/ClientService/WebServices/ClearInfo.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebClearInfo\</RelPath>
+      <UpdateFromURL>http://zst.gzwulian.com/ClientService/WebServices/ClearInfo.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ParkFeeMag_WebClearInfo_ClearInfo</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Aspose.Cells">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxVZLPRClientCtrlLib">
+      <Guid>{FC6B26EB-1C9A-46AA-BB44-503DD2948078}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="VZLPRClientCtrlLib">
+      <Guid>{FC6B26EB-1C9A-46AA-BB44-503DD2948078}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
